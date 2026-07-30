@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { Search, Star, Lock } from "lucide-react";
 import ProjectCarousel from "../components/ProjectCarousel.jsx";
 
+// In dev, requests to /about are proxied to the local backend (see vite.config.js).
+// In production, set VITE_API_BASE_URL to the deployed FastAPI Cloud URL.
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "";
+
 function searchSections(sections, query) {
   const q = query.trim().toLowerCase();
   if (!q || !sections) return [];
@@ -53,11 +57,11 @@ function About() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/about/profile").then((res) => {
+      fetch(`${API_BASE}/about/profile`).then((res) => {
         if (!res.ok) throw new Error(`Request failed (${res.status})`);
         return res.json();
       }),
-      fetch("/about/sections").then((res) => {
+      fetch(`${API_BASE}/about/sections`).then((res) => {
         if (!res.ok) throw new Error(`Request failed (${res.status})`);
         return res.json();
       }),
