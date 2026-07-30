@@ -144,8 +144,8 @@ def sections():
             "title": "Contact",
             "type": "contact",
             "items": [
-                {"label": "Email", "value": "mubeenlive247@gmail.com", "href": "mubeenlive247@gmail.com"},
-                {"label": "LinkedIn", "value": "muhammadMubeen", "href": "www.linkedin.com/in/muhammad-mubeen247"},
+                {"label": "Email", "value": "mubeenlive247@gmail.com", "href": "mailto:mubeenlive247@gmail.com"},
+                {"label": "LinkedIn", "value": "muhammadMubeen", "href": "https://www.linkedin.com/in/muhammad-mubeen247"},
             ],
         },
     ]
