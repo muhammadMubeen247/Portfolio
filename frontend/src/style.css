@@ -47,6 +47,25 @@ a:hover {
   border-bottom: 1px solid var(--border-light);
 }
 
+@media (max-width: 700px) {
+  .wiki-header {
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .wiki-search {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .wiki-nav {
+    margin-left: auto;
+    gap: 12px;
+  }
+}
+
 .icon-btn {
   border: none;
   background: none;
@@ -148,6 +167,14 @@ a:hover {
 @media (max-width: 1000px) {
   .wiki-body {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wiki-body {
+    padding: 12px;
+    gap: 16px;
   }
 }
 
@@ -217,6 +244,12 @@ a:hover {
   margin: 0 0 4px;
 }
 
+@media (max-width: 600px) {
+  .wiki-article h1 {
+    font-size: 26px;
+  }
+}
+
 .wiki-tabs {
   display: flex;
   gap: 16px;
@@ -260,6 +293,12 @@ a:hover {
   padding-bottom: 4px;
   margin: 28px 0 10px;
   scroll-margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .wiki-section h2 {
+    font-size: 20px;
+  }
 }
 
 .wiki-section p {
@@ -325,6 +364,18 @@ a:hover {
   max-height: 640px;
   background: #000;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .project-carousel-viewport,
+  .project-image-placeholder {
+    min-height: 200px;
+  }
+
+  .carousel-arrow {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .project-carousel-viewport img {
@@ -416,6 +467,17 @@ a:hover {
 .wiki-infobox {
   position: sticky;
   top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .wiki-toc,
+  .wiki-infobox {
+    position: static;
+  }
+
+  .wiki-infobox {
+    order: -1;
+  }
 }
 
 .infobox {
